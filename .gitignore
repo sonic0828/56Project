@@ -1,0 +1,6 @@
+*.DS_Store
+*.db
+*.svn
+*.livereload
+*.swp
+/.project
