@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*
+ * Copyright 2012, 56.com
+ * Creator: Sonic
+ * $Author: sonic $
+ * $Date: 2012-08-16 15:44:31 +0800 (Thu, 16 Aug 2012) $
+ */
+
+/* m_d_drop_menu:消息提醒 */
+.h_v3 .m_d_drop_menu,.mini_h_v3 .m_d_drop_menu,.h_v4 .m_d_drop_menu,.mini_h_v4 .m_d_drop_menu{vertical-align: top;text-align:left;min-width:54px;_width:54px;}
+	.m_d_drop_menu .f_drop_menu_sub{/*right:-1px;*/right:0;width:174px;padding:0;}
+	.m_d_loading{color: #7b7b7b;text-align: center;padding: 8px 0;}
+	/* m_d_list */
+	.m_d_list{*zoom:1;background-color: #fff;padding:8px 4px 8px 0;margin-right:0;border-bottom: 1px dotted #d9d9d9;}/* 解决ie6 下hover失焦的bug */
+	.m_d_list_item{overflow: hidden;*zoom:1;padding:1px 0;text-align:left;vertical-align: top;line-height: 20px;height:20px;}
+	.m_d_list_item .m_d_list_p{overflow: hidden;display:inline;*zoom:1;text-align:left;color: #7b7b7b;padding-left:6px;white-space: nowrap;text-overflow:ellipsis;/*vertical-align: top;*/}
+	.m_d_list_item .m_d_list_a{/*width:50px;*/}
+	.m_d_list_item .m_d_list_a:link,.m_d_list_item .m_d_list_a:visited{color:#2266aa;}
+	.m_d_list_item .m_d_list_a:hover{color:#2266aa;text-decoration: underline;}
+	.m_d_list_item .red:link,.m_d_list_item .red:visited{color: #fd2500;}
+	.m_d_list_item .red:hover{text-decoration: underline;}
+	.m_d_list_opt{*zoom:1;text-align: right;line-height: 1.8em;padding:6px 2px;color:#e3e3e3;vertical-align:top;}
+	.m_d_list_opt .m_d_list_oa{display: block;text-align:left;padding:0 10px 0 6px;}
+	.m_d_list_opt .m_d_list_oa:link,.m_d_list_opt .m_d_list_oa:visited{color:#616161;}
+	.m_d_list_opt .m_d_list_oa:hover{background-color: #e6e6e6;}
+/* msg_push_box:新消息推送弹层 */
+.msg_push_box{position: absolute;right:1px;top:29px;top:27px\9;width:171px;background-color: #ffffed;border: 1px solid #ffce7a;}
+	/* @discard 由于要与空间用同一消息接口，故需统一代码，此结构线上暂不用 */
+	.msg_push_box_ct{padding:0 8px}
+	.msg_push_box_ct .m_d_list{background-color: #ffffed;border:none;}
+	.m_d_drop_menu .m_d_list{padding-top:7px;}
+	.msg_push_box_close{position: absolute;overflow: hidden;display:block;width:14px;height:14px;text-align: center;line-height:14px;right:2px;top:4px;font-size:12px;font-family:arial;}
+	.msg_push_box .msg_push_box_close:link,.msg_push_box .msg_push_box_close:visited{color: #7b7b7b;font-weight: bold;}
+	.msg_push_box .msg_push_box_close:hover{color: #fff;background-color: #26a;}	
+	.msg_push_box .close{position: absolute;overflow: hidden;display:block;width:14px;height:14px;text-align: center;line-height:14px;right:2px;top:4px;font-size:12px;font-family:arial;}
+	.msg_push_box .close:link,.msg_push_box .close:visited{color: #7b7b7b;font-weight: bold;}
+	.msg_push_box .close:hover{color: #fff;background-color: #26a;}
+
+/*-- filter --*/
+.msg_push_box_arrow{position:absolute;display:block;width:8px;height:8px;font-size:0;background:#ffffed;border-left:1px solid #ffce7a;border-top:1px solid #ffce7a;top:-5px;top:-6px\9;left:134px;
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform:rotate(45deg);
+	filter: progid:DXImageTransform.Microsoft.Matrix( M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand' );
+}
+:root .msg_push_box_arrow{filter:none\9;}
+
