@@ -312,48 +312,45 @@ var moduleHF = (function(){
 		// c : '', 
 		miniHeaderHTML : function(){
 			return '' + 
-			'<div class="mini_h_v4">'+
+			'<div class="mini_h_v4 '+ ((document.body.scrollWidth >1280) ? "mini_h_v4_widescreen" : "")+'">'+
 				'<div class="inner">'+
 						'<a href="http://www.56.com" title="56.com - 中国领先的视频分享网站,在线视频观看,视频搜索,视频上传及分享互动" class="logo" onclick="setStat(\'title_logo\');">56.com</a>'+
 						'<div class="mini_h_nav">'+
 						'<ul class="mini_h_menu">'+
-							'<li><a href="http://kan.56.com/">看台</a></li>'+
-							'<li><a href="http://video.56.com/" onclick="setStat(\'title_video\');">视频</a></li>'+
-							'<li><a href="http://photo.56.com/">相册</a></li>'+
-							'<li><a href="http://xiu.56.com/">我秀</a></li>'+
+							'<li><a href="http://video.56.com" title="视频" class="mini_h_menu_item_a">视频</a></li>'+
 							'<li>'+
-								'<div id="dropMenu3" class="f_drop_menu drop_menu_theme_1 c_n_drop_menu">'+
+								'<div id="miniNavDropMenu" class="f_drop_menu drop_menu_theme_1 mini_nav_drop_menu">'+
 									'<div class="f_drop_menu_main">'+
-										'<a href="javascript:;" class="f_drop_menu_main_title">频道<em class="f_drop_menu_main_arrow">v</em></a>'+
+										'<a href="#" title="" class="f_drop_menu_main_title">导航<em class="f_drop_menu_main_arrow">v</em></a>'+
 									'</div>'+
 									'<div class="f_drop_menu_sub">'+
+										'<div class="f_drop_menu_sub_arrow"></div>'+
 										'<div class="f_drop_menu_sub_ct">'+
-											'<ul class="chn_list_item">'+ 
-												'<li class="bold"><a href="http://dv.56.com/" target="_blank">原创</a></li>'+
-												'<li><a href="http://dv.56.com/hongren/" target="_blank">红人馆</a></li>'+
-												'<li><a href="http://dv.56.com/ycsyl/" target="_blank">首映礼</a></li>'+
-												'<li><a href="http://dv.56.com/school/" target="_blank">高校影像力</a></li>'+
-												'<li><a href="http://dv.56.com/56paike/" target="_blank">拍客</a></li>'+
-												'<li><a href="http://dv.56.com/funny/" target="_blank">微播江湖</a></li>'+
-												'<li><a href="http://mp.56.com/" target="_blank">微栏目</a></li>'+
+											'<ul class="mini_nav_list n_1">'+
+												'<li><a target="_blank" href="http://video.56.com">视频</a></li>'+
+												'<li><a target="_blank" href="http://dv.56.com/">原创</a></li>'+
+												'<li><a target="_blank" href="#">56出品</a></li>'+
+												'<li><a target="_blank" href="#">微栏目</a></li>'+
+												'<li><a target="_blank" href="http://ent.56.com/">娱乐</a></li>'+
+												'<li><a target="_blank" href="http://music.56.com/">音乐</a></li>'+
+												'<li><a target="_blank" href="http://tvlist.56.com/">电视剧</a></li>'+
+												'<li><a target="_blank" href="http://movielist.56.com/">电影</a></li>'+
+												'<li><a target="_blank" href="http://zy.56.com/">综艺</a></li>'+
+												'<li><a target="_blank" href="http://news.56.com/">热点</a></li>'+
+												'<li><a target="_blank" href="http://fun.56.com">搞笑</a></li>'+
+												'<li><a target="_blank" href="http://xiu.56.com">我秀</a></li>'+
 											'</ul>'+
-											'<ul class="chn_list_item">'+
-												'<li class="bold"><a href="http://ent.56.com/" target="_blank">娱乐</a></li>'+
-												'<li><a href="http://tv.56.com/" target="_blank">影视</a></li>'+
-												'<li><a href="http://music.56.com/" target="_blank">音乐</a></li>'+
-												'<li><a href="http://so.56.com/videolist-type-hot_t-_c-8.html" target="_blank">动漫</a></li>'+
-												'<li><a href="http://fun.56.com/" target="_blank">搞笑</a></li>'+
-												'<li><a href="http://mm.56.com/" target="_blank">美女主播</a></li>'+
-											'</ul>'+
-											'<ul class="chn_list_item">'+
-												'<li class="bold"><a class="first" href="http://news.56.com/" target="_blank">热点</a></li>'+
-												'<li><a href="http://2012.56.com/" target="_blank">奥运</a></li>'+
-												'<li><a href="http://sport.56.com/" target="_blank">体育</a></li>'+
-												'<li><a href="http://so.56.com/videolist-type-hot_t-_c-10.html" target="_blank">科教</a></li>'+
-												'<li><a href="http://video.56.com/videolist-v-_type-hot_c-28.html" target="_blank">汽车</a></li>'+
-												'<li><a class="active" href="http://video.56.com/videolist-v-_type-hot_c-11.html" target="_blank">女性</a></li>'+
-												'<li><a href="http://video.56.com/videolist-v-_type-hot_c-34.html" target="_blank">母婴</a></li>'+
-												'<li><a href="http://travel.56.com/" target="_blank">旅游</a></li>'+
+											'<ul class="mini_nav_list n_2">'+
+												'<li><a target="_blank" href="http://z.56.com/">小镇</a></li>'+
+												'<li><a target="_blank" href="http://kan.56.com/">看台</a></li>'+
+												'<li><a target="_blank" href="http://like.56.com/">随心看</a></li>'+
+												'<li><a target="_blank" href="http://http://i.56.com/56mall/">乐币商城</a></li>'+
+												'<li><a target="_blank" href="http://union.56.com/info.html">视频分享计划</a></li>'+
+												'<li><a target="_blank" href="http://mobile.56.com/">手机客户端</a></li>'+
+												'<li><a target="_blank" href="http://i.56.com">空间</a></li>'+
+												'<li><a target="_blank" href="http://mm.56.com">美女主播</a></li>'+
+												'<li><a target="_blank" href="http://photo.56.com">相册</a></li>'+
+												'<li><a target="_blank" href="http://www.56.com/ican/ican.html">iCan</a></li>'+
 											'</ul>'+
 										'</div>'+
 									'</div>'+
@@ -402,9 +399,10 @@ var moduleHF = (function(){
 				'<li class="h_info_qmenu_item alt_item nav_msg_status">'+
 					'<div id="dropMenu2" class="f_drop_menu drop_menu_theme_1 m_d_drop_menu">'+
 						'<div class="f_drop_menu_main">'+
-							'<a href="http://msg.56.com/2012/" onClick="setStat(\'msgcenter_15141745\',1000);" class="f_drop_menu_main_title" target="_blank">消息<em id="hMsgNum" class="h_records_num" style="display:none">0</em><em class="f_drop_menu_main_arrow">v</em></a>'+
+							'<a href="http://msg.56.com/2012/" onClick="setStat(\'msgcenter_15141745\',1000);" class="f_drop_menu_main_title" target="_blank"><em class="h_icon_msg">消息</em><em id="hMsgNum" class="h_records_num" style="display:none">0</em><em class="f_drop_menu_main_arrow">v</em></a>'+
 						'</div>'+
 						'<div class="f_drop_menu_sub">'+
+							'<div class="f_drop_menu_sub_arrow"></div>'+
 							'<div id="smsNotify" class="f_drop_menu_sub_ct">'+
 								'<p class="m_d_loading">消息加载中...</p>'+
 							'</div>'+
@@ -433,7 +431,7 @@ var moduleHF = (function(){
 				// 取云观看依赖的JS
 				if(typeof jQuery =="undefined"){ jLoader("http://s1.56img.com/script/lib/jquery/jquery-1.4.4.min.js", true , "jQueryLib" , "utf-8"); }
 				//jLoader("http://s1.56img.com/script/ui/cloudplay/v1/cloudplay_v.1.js", true , "cloudPlayFn" , "utf-8");
-				var fn = function(){ jLoader("http://s1.56img.com/script/ui/cloudplay/v1/cloudplay_v.1.js", true , "cloudPlayFn" , "utf-8"); }
+				var fn = function(){ jLoader("http://s1.56img.com/script/ui/cloudplay/v1/cloudplay_v.2.js", true , "cloudPlayFn" , "utf-8"); }
 				setTimeout(fn, 300);
 
 				// 云观看设置
@@ -450,9 +448,10 @@ var moduleHF = (function(){
 				// '<li class="'+ ((this.headType=="normal") ? "h_info_qmenu_item alt_item" : "mini_h_qmenu_item last" ) +'">'+
 					'<div id="cloudPlayDropMenu" class="f_drop_menu drop_menu_theme_1 c_p_drop_menu">'+
 						'<div class="f_drop_menu_main">'+
-							'<a class="f_drop_menu_main_title" href="javascript:;">我的观看'+cloudNumHTML+'<em class="f_drop_menu_main_arrow">v</em></a>'+
+							'<a class="f_drop_menu_main_title" href="javascript:;"><em class="h_icon_cloudplay">我的观看</em>'+cloudNumHTML+'<em class="f_drop_menu_main_arrow">v</em></a>'+
 						'</div>'+
 						'<div class="f_drop_menu_sub">'+
+							'<div class="f_drop_menu_sub_arrow"></div>'+
 							'<div id="cpRecord" class="f_drop_menu_sub_ct" >' +
 							   '<div class="c_p_drop_menu_hd">' +
 							      '<ul class="c_p_hd_tabs">' +
@@ -490,7 +489,7 @@ var moduleHF = (function(){
 			if ( u.length > 8){ u = u.substring(0, 8) + '..' }
 
 			// 未登陆 HTML 
-			if (headType === "normal"){
+			/*if (headType === "normal"){
 				var unloginHtml = [
 					'<li class="h_info_qmenu_item first_item my56">我的56网:</li>',
 					'<li class="h_info_qmenu_item"><a href="javascript:;" onclick="weibo.connect(\'sina\',\'loginbox\');" class="rp_a"><s class="rp_tsina"></s>新浪</a></li>',
@@ -504,15 +503,15 @@ var moduleHF = (function(){
 					'<li class="h_info_qmenu_item"><a href="javascript:show_login();" onclick="setStat(\'n_nav_login\',1000);">登录</a></li>',
 					'<li class="h_info_qmenu_item"><a id="regLinkItem" target="_blank" href="http://user.56.com/reg/" onclick="setStat(\'n_nav_reg\',1000);">注册</a></li>'
 				].join("");				
-			}
+			}*/
+			var unloginHtml = [
+				'<li class="h_info_qmenu_item first_item my56">我的56网:</li>',
+				'<li class="h_info_qmenu_item"><a href="javascript:;" onclick="weibo.connect(\'sina\',\'loginbox\');" class="rp_a"><s class="rp_tsina"></s>新浪</a></li>',
+				'<li class="h_info_qmenu_item"><a href="javascript:;" onclick="weibo.connect(\'qzone\',\'loginbox\');" class="rp_a"><s class="rp_qq"></s>QQ</a></li>',
+				'<li class="h_info_qmenu_item"><a href="javascript:show_login();" onclick="setStat(\'n_nav_login\',1000);">登录</a></li>',
+				'<li class="h_info_qmenu_item"><a id="regLinkItem" target="_blank" href="http://user.56.com/reg/" onclick="setStat(\'n_nav_reg\',1000);">注册</a></li>'
+			].join("");
 
-
-			// 大头自判断
-			// var isNormalHeader = f2e_fn._id("sys_info").className;
-			// fn = function(){alert(isNormalHeader)}
-			// setTimeout(fn,2000);
-			// var rr = rHeadType();
-			// console.log(rr);
 			
 			// 已登录 HTML
 			var loginedHtml = [
@@ -520,8 +519,9 @@ var moduleHF = (function(){
 				'<li class="h_info_qmenu_item first_item my56">我的56网:</li>',
 				'<li class="h_info_qmenu_item alt_item">',
 					'<div id="dropMenu4" class="f_drop_menu drop_menu_theme_1 m_i_u_drop_menu">',
-						'<div class="f_drop_menu_main"><a href="http://i.56.com/u/' + user_id + '/home.html" target="_blank" class="f_drop_menu_main_title">' + u + '<em class="f_drop_menu_main_arrow">v</em></a></div>',
+						'<div class="f_drop_menu_main"><a href="http://i.56.com/u/' + user_id + '/home.html" target="_blank" class="f_drop_menu_main_title"><img src="' + usr.photo() + '" width="28" height="28" class="avatar" alt="" />' + u + '<em class="f_drop_menu_main_arrow">v</em></a></div>',
 						'<div class="f_drop_menu_sub">',
+							'<div class="f_drop_menu_sub_arrow"></div>',
 							'<div class="f_drop_menu_sub_ct">',
 								'<ul class="f_drop_menu_sub_list">',
 									'<li><a href="http://i.56.com/u/' + user_id + '" target="_blank">我的空间</a></li>',
@@ -565,11 +565,17 @@ var moduleHF = (function(){
 						'<div class="f_drop_menu_sub">'+
 							'<div class="f_drop_menu_sub_ct">'+
 								'<ul class="f_drop_menu_sub_list">'+
-									'<li><a href="http://photo.56.com/mv/make/" onClick="setStat(\'si_nav_mv\', true);" target="_blank">制作相册视频</a></li>'+
-									'<li><a href="http://upload.56.com/r/" onClick="setStat(\'adminrec_31105725\', true);" target="_blank">录制视频</a></li>'+
+									'<li><a href="http://photo.56.com/mv/make/" onClick="setStat(\'si_nav_mv\', true);" title="制作相册视频" class="h_btn_m2v" target="_blank">制作相册视频</a></li>'+
+									// '<li><a href="http://photo.56.com/mv/make/" onClick="setStat(\'si_nav_mv\', true);" target="_blank">制作相册视频</a></li>'+
+									// '<li><a href="http://upload.56.com/r/" onClick="setStat(\'adminrec_31105725\', true);" target="_blank">录制视频</a></li>'+
 								'</ul>'+
 							'</div>'+
 						'</div>'+
+					'</div>'+
+					
+					'<div class="s_c_mini_btn">'+
+						'<a href="http://upload.56.com/v/" onClick="setStat(\'i_nav_upload_8\', true);" title="上传视频" class="h_btn_upload_mini" target="_blank">上传视频</a>'+
+						'<a href="http://photo.56.com/mv/make/" onClick="setStat(\'si_nav_mv\', true);" title="制作相册视频" class="h_btn_m2v_mini" target="_blank">相册视频</a>'+
 					'</div>'+
 				'</li>'
 			].join("");
@@ -805,8 +811,8 @@ var moduleHF = (function(){
 					'<ul class="f_group_logo_list">' + 
 						'<li><a href="http://www.56.com" title="56网" target="_blank" class="gl_56">56网</a></li>' + 
 						'<li><a href="http://www.renren.com" title="人人网" target="_blank" class="gl_renren">人人网</a></li>' + 
-						'<li><a href="http://wan.renren.com" title="人人游戏" target="_blank" class="gl_wan">人人游戏</a></li>' + 
 						'<li><a href="http://www.nuomi.com" title="糯米网" target="_blank" class="gl_nuomi">团购</a></li>' + 
+						'<li><a href="http://wan.renren.com" title="人人游戏" target="_blank" class="gl_wan">人人游戏</a></li>' + 
 						'<li><a href="http://www.jiexi.com/" title="皆喜网" target="_blank" class="gl_jiexi">皆喜网</a></li>' + 
 					'</ul>' + 
 				'</div>' + 
@@ -997,8 +1003,8 @@ var f2e_fn = (function(){
 	 * @creator: Sonic (2012-08-09)
 	 */
 	function dropMenuHover(sfID,sfClass){
-		var sfIDs = sfID ? [sfID] : ["dropMenu0","dropMenu1","dropMenu2","dropMenu3","dropMenu4","dropMenu5","dropMenu6","cloudPlayDropMenu"];
-		var sfClass = sfClass ? [sfClass] : ["h_search_drop_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover"];
+		var sfIDs = sfID ? [sfID] : ["dropMenu0","dropMenu1","dropMenu2","dropMenu3","dropMenu4","dropMenu5","dropMenu6","miniNavDropMenu","cloudPlayDropMenu"];
+		var sfClass = sfClass ? [sfClass] : ["h_search_drop_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover","drop_menu_theme_1_hover"];
 		var sfHandelName = "f_drop_menu_main";
 		
 		for (var i=0;i<sfIDs.length;i++){
@@ -1020,15 +1026,15 @@ var f2e_fn = (function(){
 					}else{ /* 非触屏设备 修改为通过DOM 2级方式绑定事件 */
 						// addEvent(sfElements, "mouseover", function(){ (this.className.indexOf(sfClassName) == -1 ) ? this.className+= sfClassName : "" })
 						// addEvent(sfElements, "mouseout", function(){ this.className = this.className.replace(new RegExp(sfClassName+"\\b"), ""); })
-						var ehOver = function(){ (sfElements.className.indexOf(sfClassName) == -1 ) ? sfElements.className+= sfClassName : "";if(sfIDs[ix] == "cloudPlayDropMenu"){setStat('total_2_02185957');} }
-						var ehOut  = function(){ sfElements.className = sfElements.className.replace(new RegExp(sfClassName+"\\b"), ""); }
+						var ehOver = function(){ (sfElements.className.indexOf(sfClassName) == -1 ) ? sfElements.className+= sfClassName : ""; }
+						var ehOut  = function(){ sfElements.className = sfElements.className.replace(new RegExp(sfClassName+"\\b"), ""); if(sfIDs[ix] == "cloudPlayDropMenu"){setStat('total_2_02185957');}}
 						delayHover(sfElements, ehOver, ehOut, 200);
 					}
 				}
 			})(i)
 		}
 		// 弹开小黄贴回避
-		popupBoxAvoid("msgPushBox",["dropMenu4","dropMenu5","cloudPlayDropMenu"]);
+		popupBoxAvoid("msgPushBox",["dropMenu2","dropMenu5","cloudPlayDropMenu"]);
 	};
 
 	/**
@@ -1203,6 +1209,7 @@ var f2e_fn = (function(){
 	/**
 	 * 页头页脚搜索input事件绑定与值处理。
 	 * @param  {String} hdID 页头搜索输入框ID
+	 * @param  {String} hdMiniID Mini页头搜索输入框ID
 	 * @param  {String} ftID 页脚搜索输入框ID
 	 * @return {Action}      [description]
 	 * @creator Sonic (2012-12-04)
@@ -1259,8 +1266,8 @@ var f2e_fn = (function(){
 	/*--[搜索框下拉的事件]------------------------------------------------------------------------------------------------------------*/
 	soFormFn = {
 		isSubmit : false,
-		// position : "header",
-
+		
+		// 搜索表单下拉选择事件
 		setFormType : function (position, type, sName) {
 			if (position === "header"){
 				// console.log("设置header 搜索")
@@ -1278,6 +1285,7 @@ var f2e_fn = (function(){
 			_id(searchType).value = type;
 		},
 
+		// 搜索表单下拉选择设置
 		searchFormSet:function(position, sType){
 			if (!position || !sType) return;
 			switch (sType){
@@ -1293,6 +1301,7 @@ var f2e_fn = (function(){
 			}
 		},
 
+		// 大页头搜索提交
 		searchSubmit : function () {
 			// if (soFormFn.isSubmit === false) {
 				// soFormFn.isSubmit = true;
@@ -1307,8 +1316,9 @@ var f2e_fn = (function(){
 					searchForm.submit();
 				}
 			// }
-
 		}, 
+
+		// 大页脚搜索提交
 		searchSubmitFooter : function(){
 			if(_id("Type_input_footer")){
 				var searchType = _id("Type_input_footer").value;	// 大页头，搜索类型: all | video | ambum
@@ -1317,6 +1327,8 @@ var f2e_fn = (function(){
 				//this.disabledInput("footer");
 			}
 		},
+
+		// 提交表单时，disabled所有input，阻止表单传值
 		disabledInput : function (position) {
 			if(position === "footer"){  //页脚的input
 				var input = document.getElementById("fSearchForm").getElementsByTagName("input");
@@ -1329,6 +1341,7 @@ var f2e_fn = (function(){
 				}
 			}
 		},
+
 		// 大头搜索事件绑定
 		bindSearchEvent : function(){
 			_id("searchAllHandle").onclick = function(){ soFormFn.searchFormSet("header","all") };
@@ -1344,6 +1357,7 @@ var f2e_fn = (function(){
 				setStat('total_1_01175026');
 			}
 		},
+
 		// 小头搜索事件绑定
 		bindSearchEventMini:function(){
 			// alert("bindSearchEventMini");
@@ -1352,6 +1366,7 @@ var f2e_fn = (function(){
 				setStat('title_home');
 			}
 		},
+		
 		// 大页脚搜索事件
 		bindSearchEventFoot : function(){
 			_id("searchAllHandleFooter").onclick = function(){ soFormFn.searchFormSet("footer","all") };
@@ -1363,6 +1378,7 @@ var f2e_fn = (function(){
 			}
 		}
 	}
+	/*--End [搜索框下拉的事件]----------------------------------------------------------------------------------------------------------------------------*/
 
 	// 加入收藏夹
 	function addToFavorites (url,title){
@@ -1401,7 +1417,28 @@ var f2e_fn = (function(){
 		return ' class="current"';
 	};
 
-	/*--End [搜索框下拉的事件]----------------------------------------------------------------------------------------------------------------------------*/
+	/**
+	 * @name: f2e_fn.setMiniHeaderWidth
+	 * @overview: 设置 .mini_h_v4 的宽度，超过1280时，增加 .mini_h_v4_widescreen
+	 * @required: null
+	 * @creator: Sonic (2013-02-17)
+	 */
+	function setMiniHeaderWidth(){
+		// 判断到是小页头才做如下操作
+		var a = _class("mini_h_v4",document,"div")[0];
+		if(a){ 
+			var onResizefn = function(){
+				var bw = document.body.scrollWidth;
+				// console.log("当前宽度为："+bw)
+				if(bw > 1280){ 
+					a.className = "mini_h_v4 mini_h_v4_widescreen"
+				}else{
+					a.className = "mini_h_v4"
+				}
+			}
+			addEvent(window, "resize", onResizefn);
+		}
+	};
 
 	/**
 	 * @name: f2e_fn.onloadInit
@@ -1411,6 +1448,7 @@ var f2e_fn = (function(){
 	 */	
 	function onloadInit(){
 		//dropMenuHover(); /* 此功能诺至上面页头HTML加載后马上执行 2012-09-07 */
+		setMiniHeaderWidth();
 		searchInputInit("Search_input","Search_mini_input","search_foot_input");
 		smsNotify();
 		msgPushHidden(5000);
@@ -1423,6 +1461,7 @@ var f2e_fn = (function(){
 	 * @creator: Sonic (2012-08-08)
 	 */
 	function loginSucCallbackInit(){
+		setMiniHeaderWidth();
 		dropMenuHover();
 		smsNotify();
 		msgPushHidden(5000);
