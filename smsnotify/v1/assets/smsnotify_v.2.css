@@ -24,7 +24,7 @@
 	.m_d_list_opt .m_d_list_oa:link,.m_d_list_opt .m_d_list_oa:visited{color:#616161;}
 	.m_d_list_opt .m_d_list_oa:hover{background-color: #e6e6e6;}
 /* msg_push_box:新消息推送弹层 */
-.msg_push_box{position: absolute;right:1px;top:29px;top:27px\9;width:171px;background-color: #ffffed;border: 1px solid #ffce7a;}
+.msg_push_box{position: absolute;right:1px;top:29px;width:171px;background-color: #ffffed;border: 1px solid #ffce7a;}
 	/* @discard 由于要与空间用同一消息接口，故需统一代码，此结构线上暂不用 */
 	.msg_push_box_ct{padding:0 8px}
 	.msg_push_box_ct .m_d_list{background-color: #ffffed;border:none;}
